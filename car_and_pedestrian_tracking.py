@@ -4,7 +4,7 @@ import cv2
 
 #videos
 video_file = 'videos/dash_cam.mp4'
-video_file = 'videos/pedestrians.mp4'
+# video_file = 'videos/pedestrians.mp4'
 
 # get video using opencv
 video = cv2.VideoCapture(video_file)
@@ -29,8 +29,14 @@ while True:
 
     # detect cars
     cars = car_tracker.detectMultiScale(grayscaled_frame)
-    print(cars)
+    # print(cars)
+
+    # draw rectangles around cars
+    for x, y, w, h in cars:
+        cv2.rectangle(frame, (x,y), (x+w, y+h), (0,0,240), 2)
+
+
 
     # Display
-    cv2.imshow('Cars and Pedestrians', grayscaled_frame)
+    cv2.imshow('Cars and Pedestrians', frame)
     cv2.waitKey(1)
