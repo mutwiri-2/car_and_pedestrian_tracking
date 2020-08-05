@@ -27,13 +27,19 @@ while True:
     else:
         break
 
-    # detect cars
+    # detect cars and pedestrians
     cars = car_tracker.detectMultiScale(grayscaled_frame)
     # print(cars)
+    pedestrians = pedestrian_tracker.detectMultiScale(grayscaled_frame)
+    # print(pedestrians)
 
     # draw rectangles around cars
     for x, y, w, h in cars:
         cv2.rectangle(frame, (x,y), (x+w, y+h), (0,0,240), 2)
+
+    # draw rectangles around pedestrians
+    for x, y, w, h in pedestrians:
+        cv2.rectangle(frame, (x,y), (x+w, y+h), (0, 240, 240), 2)
 
 
 
