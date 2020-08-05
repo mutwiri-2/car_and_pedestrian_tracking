@@ -42,7 +42,13 @@ while True:
         cv2.rectangle(frame, (x,y), (x+w, y+h), (0, 240, 240), 2)
 
 
-
     # Display
     cv2.imshow('Cars and Pedestrians', frame)
-    cv2.waitKey(1)
+
+    # q or Q to exit
+    key = cv2.waitKey(1)
+    if key==81 or key==113:
+        break
+
+# memory management
+video.release()
