@@ -19,6 +19,10 @@ black_n_white = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cars = car_tracker.detectMultiScale(black_n_white)
 # print(cars) 
 
+# draw rectangles around the cars in the image
+for x, y, w, h in cars:
+    cv2.rectangle(img, (x,y), (x+w, y+h), (0,0,250), 2)
+
 # display image
 cv2.imshow('Cars on a highway', img)
 
