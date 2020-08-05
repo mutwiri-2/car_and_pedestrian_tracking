@@ -11,6 +11,13 @@ img_file = random.choice(
 # read image in opencv format
 img = cv2.imread(img_file)
 
+# pre-trained classifier
+full_body_classifier = 'classifier_files/haarcascade_fullbody.xml'
+
+# create a classifier object
+full_body_detector = cv2.CascadeClassifier(full_body_classifier)
+
+
 
 # display
 cv2.imshow('Pedestrians' ,img)
