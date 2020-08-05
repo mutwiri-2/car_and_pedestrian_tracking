@@ -6,9 +6,13 @@ import cv2
 video_file = 'videos/dash_cam.mp4'
 video_file = 'videos/pedestrians.mp4'
 
-# read video using opencv
+# get video using opencv
 video = cv2.VideoCapture(video_file)
 
 # classifier files
 pedestrian_classifier_file = 'classifier_files/haarcascade_fullbody.xml'
 car_classifier_file = 'classifier_files/vehicle_detection_haarcascades.xml'
+
+while True:
+    # read the current frame from VideoCapture object
+    read_successful, frame = video.read()
