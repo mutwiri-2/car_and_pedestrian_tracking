@@ -16,3 +16,13 @@ car_classifier_file = 'classifier_files/vehicle_detection_haarcascades.xml'
 while True:
     # read the current frame from VideoCapture object
     read_successful, frame = video.read()
+
+    if read_successful:
+        # convert to black n white for faster processing
+        grayscaled_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    else:
+        break
+
+    # Display
+    cv2.imshow('Cars and Pedestrians', grayscaled_frame)
+    cv2.waitKey(1)
