@@ -5,7 +5,8 @@ import random
 
 # image files
 img_file = random.choice(
-    ['images/pedestrians.jpg', 'images/pedestrians1.jpeg', 'images/pedestrians3.jpg']
+    ['images/pedestrians.jpg', 'images/pedestrians1.jpeg', 'images/pedestrians3.jpg',
+     'images/pedestrians2.jpeg']
 )
 
 # read image in opencv format
