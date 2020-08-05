@@ -33,4 +33,4 @@ cv2.imshow('Cars on a highway', img)
 # Wait for key press - Don't autoclose
 cv2.waitKey()
 
-print("Code completed")
+# print("Code completed")

@@ -33,4 +33,4 @@ for x, y, w, h in pedestrians:
 cv2.imshow('Pedestrians', img)
 cv2.waitKey(10000)
 
-print("Code completed")
+# print("Code completed")
