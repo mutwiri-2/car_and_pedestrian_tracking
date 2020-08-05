@@ -27,7 +27,9 @@ while True:
     else:
         break
 
-
+    # detect cars
+    cars = car_tracker.detectMultiScale(grayscaled_frame)
+    print(cars)
 
     # Display
     cv2.imshow('Cars and Pedestrians', grayscaled_frame)
