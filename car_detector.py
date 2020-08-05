@@ -1,11 +1,10 @@
 """detect cars in an image"""
 
 import cv2
+import random
 
 # image file
-img_file = 'images/cars.jpg'
-img_file = 'images/cars2.jpg'
-img_file = 'images/cars3.jpg'
+img_file = random.choice(['images/cars.jpg', 'images/cars2.jpg', 'images/cars3.jpg'])
 
 # pre-trained car classifier
 car_detection_file = 'classifier_files/vehicle_detection_haarcascades.xml'
