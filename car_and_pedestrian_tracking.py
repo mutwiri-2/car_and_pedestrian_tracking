@@ -15,7 +15,7 @@ car_tracker = cv2.CascadeClassifier(car_detection_file)
 # convert image to black and white - makes algorith faster
 black_n_white = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-# detect where cars are in the image
+# apply classifier object on image to detect cars
 cars = car_tracker.detectMultiScale(black_n_white)
 # print(cars) 
 
