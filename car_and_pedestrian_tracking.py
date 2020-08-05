@@ -9,6 +9,9 @@ car_detection_file = 'classifier_files/vehicle_detection_haarcascades.xml'
 # create opencv image
 img = cv2.imread(img_file)
 
+# create a car classifier object
+car_tracker = cv2.CascadeClassifier(car_detection_file)
+
 
 # display image
 cv2.imshow('Cars on a highway', img)
